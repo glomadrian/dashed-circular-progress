@@ -4,5 +4,9 @@
     <string name="app_name">CircularAnimatedProgressBar</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="restart">restart</string>
+    <string name="stars">Stars</string>
+    <string name="speed">Speed</string>
+    <string name="stromg">Strength</string>
 
 </resources>

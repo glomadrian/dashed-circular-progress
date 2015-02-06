@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dragon_ball"
+    android:background="@color/pager_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.glomadrian.dashedcircularprogress.DashedCircularProgress
+        android:id="@+id/dragon_ball_progress"
+        custom:external_color="#1affffff"
+        custom:base_color="@color/pager_base_color"
+        custom:min="0"
+        custom:max="1000"
+        custom:progress_color="@color/material_pink"
+        custom:progress_icon="@drawable/ball"
+        custom:duration="1000"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/dragon_ball_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>
+        </RelativeLayout>
+
+    </com.github.glomadrian.dashedcircularprogress.DashedCircularProgress>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="simple_bg">#03A9F4</color>
+    <color name="white">#ffffff</color>
+    <color name="pager_bg">#212121</color>
+    <color name="material_pink">#FF4081</color>
+    <color name="pager_base_color">#4cffffff</color>
+    <color name="size_bg">#ffdcd5d6</color>
+    <color name="size_external">#ffff001e</color>
+    <color name="size_base">#ff959595</color>
+    <color name="size_external_circle">#a3ff3443</color>
+</resources>

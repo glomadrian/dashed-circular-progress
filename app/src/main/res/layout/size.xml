@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:background="@color/size_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.glomadrian.dashedcircularprogress.DashedCircularProgress
+        android:id="@+id/size"
+        custom:external_color="@color/size_external_circle"
+        custom:base_color="@color/size_base"
+        custom:min="0"
+        custom:max="10"
+        custom:progress_color="@color/size_external"
+        custom:progress_icon="@drawable/vader_icon"
+        custom:duration="6000"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:id="@+id/android_image"
+            android:src="@drawable/vader"
+            android:layout_height="64dp"
+            android:layout_width="64dp" />
+
+    </com.github.glomadrian.dashedcircularprogress.DashedCircularProgress>
+
+    <Button
+        android:id="@+id/restart"
+        android:text="@string/restart"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

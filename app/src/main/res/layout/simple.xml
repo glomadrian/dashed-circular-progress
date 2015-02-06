@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:background="@color/simple_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.glomadrian.dashedcircularprogress.DashedCircularProgress
+        android:id="@+id/simple"
+        custom:external_color="#1affffff"
+        custom:base_color="#6effffff"
+        custom:min="0"
+        custom:max="999"
+        custom:progress_color="@color/abc_primary_text_material_dark"
+        custom:progress_icon="@drawable/star"
+        custom:duration="3500"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="25sp"
+                android:id="@+id/text"
+                android:textColor="@color/white"
+                android:text="@string/stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/number"
+                android:paddingTop="5dp"
+                android:layout_below="@+id/text"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </com.github.glomadrian.dashedcircularprogress.DashedCircularProgress>
+
+    <Button
+        android:id="@+id/restart"
+        android:text="@string/restart"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

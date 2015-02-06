@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ff1998c3"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/value"
+        android:textSize="20dp"
+        android:textColor="#FFF"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.github.glomadrian.dashedcircularprogress.DashedCircularProgress
+        android:id="@+id/circular"
+        custom:external_color="#1affffff"
+        custom:base_color="#6effffff"
+        custom:min="0"
+        custom:max="9999"
+        custom:progress_color="@color/abc_primary_text_material_dark"
+        custom:progress_icon="@drawable/running"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <RelativeLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:textSize="20dp"
+                android:id="@+id/steps"
+                android:textColor="#c1ffffff"
+                android:text="Steps"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="#FFF"
+                android:textSize="45dp"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/numbers"
+                android:text="2593"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="#c1ffffff"
+                android:paddingTop="60dp"
+                android:paddingRight="60dp"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="1,8Km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="#c1ffffff"
+                android:paddingTop="60dp"
+                android:paddingLeft="50dp"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:text="111cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </com.github.glomadrian.dashedcircularprogress.DashedCircularProgress>
+</RelativeLayout>
