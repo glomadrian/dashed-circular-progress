@@ -9,7 +9,7 @@ A Circular progress animated where you can put any view inside
 </a>
 ## Minimal SDK Version
 
-The minimal sdk support version is 11
+The minimal sdk supported version is 11
 
 Example
 ------------
