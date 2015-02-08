@@ -14,7 +14,6 @@ public class ProgressPainterImp implements ProgressPainter {
     private RectF progressCircle;
     private Paint progressPaint;
     private int color = Color.RED;
-
     private float startAngle = 270f;
     private float plusAngle = 0;
     private int internalStrokeWidth = 48;
@@ -27,18 +26,16 @@ public class ProgressPainterImp implements ProgressPainter {
     private int width;
     private int height;
 
-    public ProgressPainterImp(int color, float min, float max, int width, int height) {
+    public ProgressPainterImp(int color, float min, float max) {
         this.color = color;
         this.min = min;
         this.max = max;
-        this.width = width;
-        this.height = height;
         init();
     }
 
     private void init() {
         initInternalCirclePainter();
-        initInternalCircle();
+
     }
 
     private void initInternalCirclePainter() {
@@ -80,6 +77,13 @@ public class ProgressPainterImp implements ProgressPainter {
 
     public void setValue(float value) {
         this.plusAngle = (359.8f * value) / max;
+    }
+
+    @Override
+    public void onSizeChanged(int height, int width) {
+        this.width = width;
+        this.height = height;
+        initInternalCircle();
     }
 
     public int getColor() {

@@ -47,7 +47,6 @@ public class DashedCircularProgress extends RelativeLayout {
     private int padingTop = 22;
     private int heightNormalittation = 10;
 
-
     public DashedCircularProgress(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
@@ -58,6 +57,15 @@ public class DashedCircularProgress extends RelativeLayout {
         init(context, attrs);
     }
 
+    /**
+     * All the children must have a max height and width, never bigger than the internal circle
+     *
+     * @param changed
+     * @param left
+     * @param top
+     * @param right
+     * @param bottom
+     */
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
@@ -94,6 +102,8 @@ public class DashedCircularProgress extends RelativeLayout {
         TypedArray attributes = context.obtainStyledAttributes(attributeSet,
                 R.styleable.DashedCircularProgress);
         initAttributes(attributes);
+        initPainters();
+        initValueAnimator();
     }
 
     private void initAttributes(TypedArray attributes) {
@@ -106,24 +116,25 @@ public class DashedCircularProgress extends RelativeLayout {
         max = attributes.getFloat(R.styleable.DashedCircularProgress_max, max);
         duration = attributes.getInt(R.styleable.DashedCircularProgress_duration, duration);
         image = BitmapFactory.decodeResource(getResources(), attributes
-                .getResourceId(R.styleable.DashedCircularProgress_progress_icon, R.drawable.android));
+                .getResourceId(R.styleable.DashedCircularProgress_progress_icon,
+                        R.drawable.android));
     }
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        initPainters(w, h);
-        initValueAnimator();
+        progressPainter.onSizeChanged(h, w);
+        externalCirclePainter.onSizeChanged(h, w);
+        internalCirclePainter.onSizeChanged(h, w);
+        iconPainter.onSizeChanged(h, w);
         animateValue();
     }
 
-    private void initPainters(int w, int h) {
-        externalCirclePainter = new ExternalCirclePainterImp(externalColor, getWidth(),
-                getHeight());
-        internalCirclePainter = new InternalCirclePainterImp(internalBaseColor, getWidth(),
-                getHeight());
-        progressPainter = new ProgressPainterImp(progressColor, min, max, w, h);
-        iconPainter = new IconPainter(image, w, h);
+    private void initPainters() {
+        progressPainter = new ProgressPainterImp(progressColor, min, max);
+        externalCirclePainter = new ExternalCirclePainterImp(externalColor);
+        internalCirclePainter = new InternalCirclePainterImp(internalBaseColor);
+        iconPainter = new IconPainter(image);
     }
 
     private void initValueAnimator() {

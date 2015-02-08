@@ -19,16 +19,13 @@ public class ExternalCirclePainterImp implements ExternalCirclePainter {
     private int height;
     private float marginTop = 11;
 
-    public ExternalCirclePainterImp(int externalColor, int width, int height) {
+    public ExternalCirclePainterImp(int externalColor) {
         this.color = externalColor;
-        this.width = width;
-        this.height = height;
         init();
     }
 
     private void init() {
         initExternalCirclePainter();
-        initExternalCircle();
     }
 
     private void initExternalCirclePainter() {
@@ -59,6 +56,13 @@ public class ExternalCirclePainterImp implements ExternalCirclePainter {
     @Override
     public int getColor() {
         return color;
+    }
+
+    @Override
+    public void onSizeChanged(int height, int width) {
+        this.width = width;
+        this.height = height;
+        initExternalCircle();
     }
 
 }

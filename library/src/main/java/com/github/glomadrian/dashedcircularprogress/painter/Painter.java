@@ -16,4 +16,5 @@ public interface Painter {
 
     int getColor();
 
+    void onSizeChanged(int height, int width);
 }

@@ -10,4 +10,5 @@ public interface ProgressPainter extends Painter {
     void setMin(float min);
 
     void setValue(float value);
+
 }

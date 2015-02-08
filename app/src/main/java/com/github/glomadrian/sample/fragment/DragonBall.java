@@ -51,7 +51,8 @@ public class DragonBall extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        dashedCircularProgress = (DashedCircularProgress) view.findViewById(R.id.dragon_ball_progress);
+        dashedCircularProgress = (DashedCircularProgress) view.
+                findViewById(R.id.dragon_ball_progress);
         dragonBallView = view.findViewById(R.id.dragon_ball);
         viewPager = (ViewPager) view.findViewById(R.id.dragon_ball_pager);
         viewPager.setPageTransformer(true, new ViewPagerTransformer());
@@ -60,7 +61,6 @@ public class DragonBall extends Fragment {
             @Override
             public void onPageScrolled(int position, float positionOffset,
                                        int positionOffsetPixels) {
-
             }
 
             @Override
@@ -124,10 +124,10 @@ public class DragonBall extends Fragment {
 
         public PagerAdapter(FragmentManager fm) {
             super(fm);
-            goku = new CharFragment(R.drawable.goku);
-            vegeta = new CharFragment(R.drawable.vegeta);
-            gohan = new CharFragment(R.drawable.gohan);
-            krillin = new CharFragment(R.drawable.krillin);
+            goku = CharFragment.newInstance(R.drawable.goku);
+            vegeta = CharFragment.newInstance(R.drawable.vegeta);
+            gohan = CharFragment.newInstance(R.drawable.gohan);
+            krillin = CharFragment.newInstance(R.drawable.krillin);
         }
 
         @Override
@@ -143,7 +143,7 @@ public class DragonBall extends Fragment {
                     return krillin;
             }
 
-            return new CharFragment(R.drawable.ic_launcher);
+            return CharFragment.newInstance(R.drawable.ic_launcher);
         }
 
         @Override
@@ -152,26 +152,26 @@ public class DragonBall extends Fragment {
         }
     }
 
-    public class CharFragment extends Fragment {
+    public static class CharFragment extends Fragment {
 
+        public static final String IMAGE_ARG = "character_image";
         private ImageView charImageView;
         private int imageResource;
         private Palette palette;
 
-        public CharFragment(int imageResource) {
-            this.imageResource = imageResource;
-        }
-
         @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                                 @Nullable Bundle savedInstanceState) {
             return inflater.inflate(R.layout.char_layout, container, false);
         }
 
         @Override
         public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+            getBundleArgs();
             charImageView = (ImageView) view.findViewById(R.id.char_image);
             charImageView.setImageResource(imageResource);
-            palette = Palette.generate(((BitmapDrawable) charImageView.getDrawable()).getBitmap(), 32);
+            palette = Palette.generate(((BitmapDrawable) charImageView.getDrawable()).getBitmap(),
+                    32);
         }
 
         public Palette getPalette() {
@@ -180,6 +180,18 @@ public class DragonBall extends Fragment {
 
         public void setPalette(Palette palette) {
             this.palette = palette;
+        }
+
+        public void getBundleArgs() {
+            imageResource = getArguments().getInt(IMAGE_ARG);
+        }
+
+        public static CharFragment newInstance(int characterImage) {
+            CharFragment charFragment = new CharFragment();
+            Bundle args = new Bundle();
+            args.putInt(IMAGE_ARG, characterImage);
+            charFragment.setArguments(args);
+            return charFragment;
         }
     }
 

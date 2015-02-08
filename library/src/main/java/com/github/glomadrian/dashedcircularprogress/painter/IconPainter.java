@@ -15,29 +15,18 @@ public class IconPainter implements Painter {
     private int centreY;
     private int width;
     private int height;
-    private int imageWith;
-    private int imageHeihgt;
 
-    public IconPainter(Bitmap image, int width, int height) {
+    public IconPainter(Bitmap image) {
         this.image = image;
-        this.width = width;
-        this.height = height;
-//        this.centreX = (width - image.getWidth()) / 2;
-//        this.centreY = (height - image.getHeight()) / 2;
-        this.centreX = (width - 64) / 2;
-        this.centreY = (height - 64) / 2;
     }
 
-    private void calculateImageDimmensions() {
-        imageHeihgt = height / 11;
-        imageWith = width / 11;
+    private void initBitmap() {
         image = Bitmap.createScaledBitmap(image, 64, 64, false);
     }
 
     @Override
     public void draw(Canvas canvas) {
-        calculateImageDimmensions();
-
+        initBitmap();
         canvas.drawBitmap(image, centreX, 0, new Paint());
     }
 
@@ -49,6 +38,14 @@ public class IconPainter implements Painter {
     @Override
     public int getColor() {
         return 0;
+    }
+
+    @Override
+    public void onSizeChanged(int height, int width) {
+        this.width = width;
+        this.height = height;
+        this.centreX = (width - 64) / 2;
+        this.centreY = (height - 64) / 2;
     }
 
     public void setImage(Bitmap image) {

@@ -42,7 +42,8 @@ public class Pager extends Fragment {
 
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            public void onPageScrolled(int position, float positionOffset,
+                                       int positionOffsetPixels) {
 
             }
 
@@ -60,7 +61,8 @@ public class Pager extends Fragment {
 
             }
         });
-        dashedCircularProgress.setOnValueChangeListener(new DashedCircularProgress.OnValueChangeListener() {
+        dashedCircularProgress.setOnValueChangeListener(
+                new DashedCircularProgress.OnValueChangeListener() {
             @Override
             public void onValueChange(float value) {
 
@@ -109,7 +111,8 @@ public class Pager extends Fragment {
     public class SpeedFragment extends Fragment {
 
         @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                                 @Nullable Bundle savedInstanceState) {
             return inflater.inflate(R.layout.speed, container, false);
         }
     }
@@ -117,7 +120,8 @@ public class Pager extends Fragment {
     public class StrongFragment extends Fragment {
 
         @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                                 @Nullable Bundle savedInstanceState) {
             return inflater.inflate(R.layout.strong, container, false);
         }
     }

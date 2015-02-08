@@ -13,7 +13,6 @@ public class InternalCirclePainterImp implements InternalCirclePainter {
     private RectF internalCircle;
     private Paint internalCirclePaint;
     private int color;
-
     private float startAngle = 270;
     private float finishAngle = 359.8f;
     private int width;
@@ -23,16 +22,13 @@ public class InternalCirclePainterImp implements InternalCirclePainter {
     private int dashSpace = 8;
     private float marginTop = 45;
 
-    public InternalCirclePainterImp(int color, int width, int height) {
+    public InternalCirclePainterImp(int color) {
         this.color = color;
-        this.width = width;
-        this.height = height;
         init();
     }
 
     private void init() {
         initExternalCirclePainter();
-        initExternalCircle();
     }
 
     private void initExternalCirclePainter() {
@@ -56,14 +52,6 @@ public class InternalCirclePainterImp implements InternalCirclePainter {
         canvas.drawArc(internalCircle, startAngle, finishAngle, false, internalCirclePaint);
     }
 
-    public float getInternalWidth() {
-        return width - (internalStrokeWidth * 1.7f) - 130;
-    }
-
-    public float getInternalHeight() {
-        return height - (internalStrokeWidth * 1.7f) - marginTop - 130;
-    }
-
     public void setColor(int color) {
         this.color = color;
         internalCirclePaint.setColor(color);
@@ -72,5 +60,12 @@ public class InternalCirclePainterImp implements InternalCirclePainter {
     @Override
     public int getColor() {
         return color;
+    }
+
+    @Override
+    public void onSizeChanged(int height, int width) {
+        this.width = width;
+        this.height = height;
+        initExternalCircle();
     }
 }
