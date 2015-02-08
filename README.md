@@ -3,6 +3,10 @@ Dashed Circular Progress
 
 A Circular progress animated where you can put any view inside
 
+<a href="https://play.google.com/store/apps/details?id=com.github.glomadrian.sample">
+  <img alt="Get it on Google Play"
+       src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
+</a>
 ## Minimal SDK Version
 
 The minimal sdk support version is 11
@@ -151,7 +155,7 @@ viewPager.setPageTransformer(true, new ViewPagerTransformer());
 Gradle
 ------------
 
-//TODO
+Waiting maven central ticket...
 
 
 Developer By
