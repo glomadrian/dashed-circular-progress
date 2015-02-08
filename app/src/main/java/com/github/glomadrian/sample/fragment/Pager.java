@@ -44,7 +44,7 @@ public class Pager extends Fragment {
             @Override
             public void onPageScrolled(int position, float positionOffset,
                                        int positionOffsetPixels) {
-
+                //Empty
             }
 
             @Override
@@ -58,14 +58,7 @@ public class Pager extends Fragment {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-        dashedCircularProgress.setOnValueChangeListener(
-                new DashedCircularProgress.OnValueChangeListener() {
-            @Override
-            public void onValueChange(float value) {
-
+                //Empty
             }
         });
     }
@@ -108,7 +101,7 @@ public class Pager extends Fragment {
         }
     }
 
-    public class SpeedFragment extends Fragment {
+    public static class SpeedFragment extends Fragment {
 
         @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -117,7 +110,7 @@ public class Pager extends Fragment {
         }
     }
 
-    public class StrongFragment extends Fragment {
+    public static class StrongFragment extends Fragment {
 
         @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,

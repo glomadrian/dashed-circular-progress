@@ -36,7 +36,6 @@ public class DragonBall extends Fragment {
     private CharFragment gohan;
     private CharFragment krillin;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,7 +82,7 @@ public class DragonBall extends Fragment {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                //Empty
             }
         });
     }
@@ -96,9 +95,8 @@ public class DragonBall extends Fragment {
             animateBackgroundColor(palette.getDarkMutedColor().getRgb());
 
         } catch (NullPointerException e) {
-            Log.e(DragonBall.class.getName(), "Error geting color from palette");
+            Log.e(DragonBall.class.getName(), "Error getting color from palette");
         }
-
     }
 
     private void animateBackgroundColor(int color) {
@@ -176,10 +174,6 @@ public class DragonBall extends Fragment {
 
         public Palette getPalette() {
             return palette;
-        }
-
-        public void setPalette(Palette palette) {
-            this.palette = palette;
         }
 
         public void getBundleArgs() {

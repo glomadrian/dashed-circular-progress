@@ -30,7 +30,6 @@ public class Adapter extends FragmentPagerAdapter {
                 return Size.getInstance();
             case 3:
                 return DragonBall.getInstance();
-
         }
         return Simple.getInstance();
     }

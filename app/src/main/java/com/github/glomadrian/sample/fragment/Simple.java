@@ -47,13 +47,13 @@ public class Simple extends Fragment {
             }
         });
 
-
-        dashedCircularProgress.setOnValueChangeListener(new DashedCircularProgress.OnValueChangeListener() {
-            @Override
-            public void onValueChange(float value) {
-                numbers.setText((int) value + "");
-            }
-        });
+        dashedCircularProgress.setOnValueChangeListener(
+                new DashedCircularProgress.OnValueChangeListener() {
+                    @Override
+                    public void onValueChange(float value) {
+                        numbers.setText((int) value + "");
+                    }
+                });
     }
 
     public static Simple getInstance() {
