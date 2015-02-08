@@ -3,7 +3,7 @@ Dashed Circular Progress
 
 A Circular progress animated where you can put any view inside
 
-<a href="https://play.google.com/store/apps/details?id=com.github.glomadrian.sample">
+<a href="https://play.google.com/store/apps/details?id=com.github.glomadrian.dashedprogressbar.demo">
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
 </a>

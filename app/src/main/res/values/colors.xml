@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="simple_bg">#03A9F4</color>
+    <color name="simple_bg">#ff39065a</color>
     <color name="white">#ffffff</color>
     <color name="pager_bg">#212121</color>
     <color name="material_pink">#FF4081</color>
