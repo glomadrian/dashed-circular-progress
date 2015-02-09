@@ -1,6 +1,7 @@
 Dashed Circular Progress
 ==
 [![Build Status](https://travis-ci.org/glomadrian/dashed-circular-progress.svg?branch=master)](https://travis-ci.org/glomadrian/dashed-circular-progress)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Dashed%20Circular%20Progress-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1513)
 
 A Circular progress animated where you can put any view inside
 
