@@ -1,5 +1,6 @@
 Dashed Circular Progress
 ==
+[![Build Status](https://travis-ci.org/glomadrian/dashed-circular-progress.svg?branch=master)](https://travis-ci.org/glomadrian/dashed-circular-progress)
 
 A Circular progress animated where you can put any view inside
 
