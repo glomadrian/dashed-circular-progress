@@ -22,7 +22,6 @@ import com.github.glomadrian.dashedcircularprogress.painter.InternalCirclePainte
 import com.github.glomadrian.dashedcircularprogress.painter.ProgressPainter;
 import com.github.glomadrian.dashedcircularprogress.painter.ProgressPainterImp;
 
-
 /**
  * @author Adrián García Lomas
  */
