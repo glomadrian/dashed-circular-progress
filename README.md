@@ -93,9 +93,9 @@ custom:duration="1000"
 ```
 More xml examples
 ------------
-* [With View pager](#)
-* [With Textview](#)
-* [With image](#)
+* [With View pager](https://github.com/glomadrian/dashed-circular-progress/blob/master/app%2Fsrc%2Fmain%2Fres%2Flayout%2Fdragon_ball.xml)
+* [With Textview](https://github.com/glomadrian/dashed-circular-progress/blob/master/app%2Fsrc%2Fmain%2Fres%2Flayout%2Fsimple.xml)
+* [With image](https://github.com/glomadrian/dashed-circular-progress/blob/master/app%2Fsrc%2Fmain%2Fres%2Flayout%2Fsize.xml)
 
 
 ## Code Usage
