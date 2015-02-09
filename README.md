@@ -20,7 +20,7 @@ Usage
 ------------
 
 ``` xml
-<com.github.glomadrian.dashedcircularprogress.CircularProgressBar
+<com.github.glomadrian.dashedcircularprogress.DashedCircularProgress
   android:id="@+id/simple"
   android:layout_width="match_parent"
   android:layout_height="match_parent"  
@@ -35,7 +35,7 @@ Usage
 >
   //Put here any view you like to be inside progress bar
 
-</com.github.glomadrian.dashedcircularprogress.CircularProgressBar>
+</com.github.glomadrian.dashedcircularprogress.DashedCircularProgress>
 
 ```
 Renember
@@ -125,7 +125,7 @@ dashedCircularProgress.setInterpolator(interpolator);
 Update Listener
 ------------
 ```java
-dashedCircularProgress.setOnValueChangeListener(new CircularProgressBar.OnValueChangeListener() {
+dashedCircularProgress.setOnValueChangeListener(new DashedCircularProgress.OnValueChangeListener() {
        @Override
        public void onValueChange(float value) {
           //Your code here
