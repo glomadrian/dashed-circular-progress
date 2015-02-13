@@ -40,9 +40,9 @@ Usage
 </com.github.glomadrian.dashedcircularprogress.DashedCircularProgress>
 
 ```
-Renember
+Remember
 ------------
-Renember put this for custom attribute usage
+Remember put this for custom attribute usage
 
 ``` java
 xmlns:custom="http://schemas.android.com/apk/res-auto"
