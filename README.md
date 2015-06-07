@@ -2,6 +2,7 @@ Dashed Circular Progress
 ==
 [![Build Status](https://travis-ci.org/glomadrian/dashed-circular-progress.svg?branch=master)](https://travis-ci.org/glomadrian/dashed-circular-progress)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Dashed%20Circular%20Progress-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1513)
+[ ![Download](https://api.bintray.com/packages/glomadrian/maven/DashedCircularProgress/images/download.svg) ](https://bintray.com/glomadrian/maven/DashedCircularProgress/_latestVersion)
 
 A Circular progress animated where you can put any view inside
 
@@ -157,9 +158,19 @@ viewPager.setPageTransformer(true, new ViewPagerTransformer());
 Gradle
 ------------
 
-Waiting maven central ticket...
+Repository
+```java
+repositories {
+  maven {
+    url "http://dl.bintray.com/glomadrian/maven"
+  }
+}
+```
 
-
+Dependency
+```java
+  compile 'com.github.glomadrian:DashedCircularProgress:1.0@aar'
+```
 Developer By
 ------------
 
