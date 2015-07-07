@@ -94,6 +94,10 @@ custom:max="999"
 ``` java
 custom:duration="1000"
 ```
+
+``` java
+custom:progress_stroke_width="48" // see the simple.xml example for setting the width thicker	
+```
 More xml examples
 ------------
 * [With View pager](https://github.com/glomadrian/dashed-circular-progress/blob/master/app%2Fsrc%2Fmain%2Fres%2Flayout%2Fdragon_ball.xml)

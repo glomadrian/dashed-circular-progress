@@ -26,10 +26,11 @@ public class ProgressPainterImp implements ProgressPainter {
     private int width;
     private int height;
 
-    public ProgressPainterImp(int color, float min, float max) {
+    public ProgressPainterImp(int color, float min, float max, int progressStrokeWidth) {
         this.color = color;
         this.min = min;
         this.max = max;
+        this.internalStrokeWidth = progressStrokeWidth;
         init();
     }
 
