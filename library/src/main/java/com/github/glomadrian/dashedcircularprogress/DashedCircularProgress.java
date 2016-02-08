@@ -45,6 +45,7 @@ public class DashedCircularProgress extends RelativeLayout {
     private int duration = 1000;
     private int padingTop = 22;
     private int heightNormalittation = 10;
+    private int progressStrokeWidth = 48;
 
     public DashedCircularProgress(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -117,6 +118,8 @@ public class DashedCircularProgress extends RelativeLayout {
         image = BitmapFactory.decodeResource(getResources(), attributes
                 .getResourceId(R.styleable.DashedCircularProgress_progress_icon,
                         R.drawable.android));
+        progressStrokeWidth = attributes.getInt(R.styleable.DashedCircularProgress_progress_stroke_width,
+            progressStrokeWidth);
     }
 
     @Override
@@ -130,7 +133,7 @@ public class DashedCircularProgress extends RelativeLayout {
     }
 
     private void initPainters() {
-        progressPainter = new ProgressPainterImp(progressColor, min, max);
+        progressPainter = new ProgressPainterImp(progressColor, min, max, progressStrokeWidth);
         externalCirclePainter = new ExternalCirclePainterImp(externalColor);
         internalCirclePainter = new InternalCirclePainterImp(internalBaseColor);
         iconPainter = new IconPainter(image);
